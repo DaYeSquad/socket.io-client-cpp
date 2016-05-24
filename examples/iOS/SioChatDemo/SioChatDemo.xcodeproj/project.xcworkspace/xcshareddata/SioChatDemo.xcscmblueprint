@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "21C71CD5ED4B8C77974DDBAF056104F039A3B593",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7448E718372DB7A4B0D01E27524ED3F8AE51A902" : 0,
+    "21C71CD5ED4B8C77974DDBAF056104F039A3B593" : 0,
+    "995AABD49A028E610D29FFC44D560D9DAC1EAC0B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1CE472E-3AF3-4EDA-9B64-F9DD83C665BC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7448E718372DB7A4B0D01E27524ED3F8AE51A902" : "sioclientlib\/rapidjson",
+    "21C71CD5ED4B8C77974DDBAF056104F039A3B593" : "sioclient",
+    "995AABD49A028E610D29FFC44D560D9DAC1EAC0B" : "sioclientlib\/websocketpp"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SioChatDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "examples\/iOS\/SioChatDemo\/SioChatDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/socketio\/socket.io-client-cpp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "21C71CD5ED4B8C77974DDBAF056104F039A3B593"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/miloyip\/rapidjson.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7448E718372DB7A4B0D01E27524ED3F8AE51A902"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zaphoyd\/websocketpp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "995AABD49A028E610D29FFC44D560D9DAC1EAC0B"
+    }
+  ]
+}

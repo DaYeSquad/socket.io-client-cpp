@@ -458,6 +458,12 @@ namespace sio
         {
             m_vector.push_back(string_message::create(text));
         }
+      
+      list(const char* chars)
+      {
+        std::string text = chars;
+        m_vector.push_back(string_message::create(text));
+      }
 
         list(std::string&& text)
         {

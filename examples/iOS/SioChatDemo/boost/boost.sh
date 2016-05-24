@@ -21,9 +21,11 @@
 
 : ${BOOST_LIBS:="random regex graph random chrono thread signals filesystem system date_time"}
 : ${IPHONE_SDKVERSION:=`xcodebuild -showsdks | grep iphoneos | egrep "[[:digit:]]+\.[[:digit:]]+" -o | tail -1`}
+: ${MIN_IOS_VERSION:=8.0}
 : ${OSX_SDKVERSION:=10.8}
 : ${XCODE_ROOT:=`xcode-select -print-path`}
 : ${EXTRA_CPPFLAGS:="-DBOOST_AC_USE_PTHREADS -DBOOST_SP_USE_PTHREADS -std=c++11 -stdlib=libc++"}
+: ${EXTRA_IOS_CPPFLAGS:="$EXTRA_CPPFLAGS -mios-version-min=$MIN_IOS_VERSION"}
 
 # The EXTRA_CPPFLAGS definition works around a thread race issue in
 # shared_ptr. I encountered this historically and have not verified that
@@ -138,12 +140,12 @@ updateBoost()
 
     cat >> $BOOST_SRC/tools/build/v2/user-config.jam <<EOF
 using darwin : ${IPHONE_SDKVERSION}~iphone
-: $XCODE_ROOT/Toolchains/XcodeDefault.xctoolchain/usr/bin/$COMPILER -arch armv6 -arch armv7 -arch armv7s -arch arm64 -fvisibility=hidden -fvisibility-inlines-hidden $EXTRA_CPPFLAGS
+: $XCODE_ROOT/Toolchains/XcodeDefault.xctoolchain/usr/bin/$COMPILER -arch armv6 -arch armv7 -arch armv7s -arch arm64 -fvisibility=hidden -fvisibility-inlines-hidden $EXTRA_IOS_CPPFLAGS
 : <striper> <root>$XCODE_ROOT/Platforms/iPhoneOS.platform/Developer
 : <architecture>arm <target-os>iphone
 ;
 using darwin : ${IPHONE_SDKVERSION}~iphonesim
-: $XCODE_ROOT/Toolchains/XcodeDefault.xctoolchain/usr/bin/$COMPILER -arch i386 -arch x86_64 -fvisibility=hidden -fvisibility-inlines-hidden $EXTRA_CPPFLAGS
+: $XCODE_ROOT/Toolchains/XcodeDefault.xctoolchain/usr/bin/$COMPILER -arch i386 -arch x86_64 -fvisibility=hidden -fvisibility-inlines-hidden $EXTRA_IOS_CPPFLAGS
 : <striper> <root>$XCODE_ROOT/Platforms/iPhoneSimulator.platform/Developer
 : <architecture>x86 <target-os>iphone
 ;
